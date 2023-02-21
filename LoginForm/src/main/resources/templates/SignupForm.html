@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container text-center">
+    <div>
+        <h1>SignUp</h1>
+    </div>
+<form th:action="@{/process_register}" method="post" th:object = "${user}">
+    <div>
+        <div class="form-group row">
+            <div>
+            <div class="form-floating">
+                <input type="email"  id="floatingInput" placeholder="name@example.com" th:field="*{email}" required />
+                <!-- <label for="floatingInput">Email address</label> -->
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="text"  id="floatingInput" placeholder="FirstName" th:field="*{firstname}" required />
+                <!-- <label for="floatingInput">First Name</label> -->
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="text"  id="floatingInput" placeholder="lastName" th:field="*{lastname}" required />
+                <!-- <label for="floatingInput">last Name</label> -->
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="number"  id="floatingInput" placeholder="PhoneNumber" th:field="*{phonenumber}" required />
+                <!-- <label for="floatingInput">PhoneNumber</label> -->
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="password"  id="floatingPassword" placeholder="Password" th:field="*{password}" required /> 
+                <!-- <label for="floatingPassword">Password</label> -->
+              </div>
+              <br>
+              <button type="submit" class="btn btn-success">submit</button>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+
+</body>
+</html>
