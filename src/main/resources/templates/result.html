@@ -8,14 +8,17 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body style="background-color:#131313; text-align: center;">
+<body style="background-color:#131313; text-align: center; color: aliceblue;">
     <div class="container" style="
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       " >
-        <h1 style="color: aliceblue;"> Your data Has Been Stored in SQL database...</h1>    
+        <h1> Congratulations...</h1>  
+        <h2 th:text="|FirstName:  ${firstname}|">First Name</h2>
+        <h2 th:text="|LastName:  ${lastname}|">Last Name</h2>
+        <h1> Your data Has Been Stored Succesfully in SQL database...!</h1>  
     </div>
 </body>
 </html>

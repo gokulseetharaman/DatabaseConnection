@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "TestCon")
+@Table(name = "dbcon")
 public class DbEntity {
 
 	@Id
@@ -17,7 +17,7 @@ public class DbEntity {
 
 	@Column(nullable = false, unique = true, length = 100) // primary key
 	private String email;
-	
+
 	@Column(nullable = false, length = 50)
 	private String firstname;
 
@@ -26,7 +26,6 @@ public class DbEntity {
 
 	@Column(nullable = false, length = 50)
 	private String phonenumber;
-
 
 	public String getEmail() {
 		return email;
@@ -60,6 +59,10 @@ public class DbEntity {
 		this.phonenumber = phonenumber;
 	}
 
-
-
+	@Override
+	public String toString() {
+		return "User [fname=" + firstname + ", lname=" + lastname + ", email=" + email + ", phone number=" + phonenumber
+				+ "]";
 	}
+
+}
